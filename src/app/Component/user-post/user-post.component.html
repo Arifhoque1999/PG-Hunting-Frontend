@@ -1,0 +1,101 @@
+<section>
+  <div class="card" *ngFor="let i of postArray">
+    <div class="pg-details">
+      <img
+        src="../../../assets/Flat Image.png"
+        alt="post-img"
+        class="post-img"
+      />
+
+      <div class="price-section">
+        <div class="pg-info">
+          <div>
+            <img src="../../../assets/mansion.png" alt="icon" />
+            <p>PG</p>
+          </div>
+          <div>
+            <img src="../../../assets/give-money.png" alt="icon" />
+            <p>8000</p>
+          </div>
+        </div>
+        <div class="pg-info">
+          <div>
+            <img src="../../../assets/maps-and-flags.png" alt="icon" />
+            <p>Chennai</p>
+          </div>
+          <div>
+            <img src="../../../assets/menu.png" alt="icon" />
+            <p>Food</p>
+          </div>
+        </div>
+        <div class="pg-info">
+          <div>
+            <img src="../../../assets/group-user.png" alt="icon" />
+            <p>Shared No</p>
+          </div>
+
+          <div>
+            <img src="../../../assets/wifi-router.png" alt="" />
+            <p>Yes</p>
+          </div>
+        </div>
+        <div class="pg-info btn">
+          <button>Get owner Details</button>
+          <img
+            src="../../../assets/share.png"
+            alt=""
+            (click)="showDialog()"
+            id="share"
+          />
+        </div>
+      </div>
+    </div>
+    <h3>World Best GP and ROOM white AC and 3 time Food and</h3>
+    <div class="like-comment-icon">
+      <div style="display: flex">
+        <img src="../../../assets/heart.png" alt=" like" />
+        <p>1k</p>
+      </div>
+      <div style="display: flex">
+        <img src="../../../assets/chat.png" alt=" like" />
+        <p>1k</p>
+      </div>
+      <div style="display: flex">
+        <img src="../../../assets/calendar.png" alt="" />
+        <p>23hr 22th may</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p-dialog
+  header="Shared Your"
+  [(visible)]="visible"
+  [style]="{ width: '50vh', height: '40vh' }"
+>
+  <div class="social-icon">
+    <div>
+      <a href="https://web.whatsapp.com/"
+        ><img src="../../../assets/whatsapp.png" alt="WhatsApp"
+      /></a>
+    </div>
+    <div>
+      <a href="https://www.facebook.com/"
+        ><img src="../../../assets/facebook.png" alt="Facebook"
+      /></a>
+    </div>
+    <div>
+      <a herf="https://www.instagram.com/"
+        ><img src="../../../assets/instagram.png" alt="Instagram"
+      /></a>
+    </div>
+    <div>
+      <a><img src="../../../assets/copy.png" alt="Copy" /></a>
+    </div>
+    <div>
+      <a href="https://g.co/kgs/oPEupU"
+        ><img src="../../../assets/gmail.png" alt="Gmail"
+      /></a>
+    </div>
+  </div>
+</p-dialog>

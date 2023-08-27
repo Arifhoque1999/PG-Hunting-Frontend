@@ -1,0 +1,30 @@
+#home-all-item {
+  display: flex;
+  justify-content: space-around;
+  .left-aside {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  .right-aside {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  #home-all-item {
+    display: block;
+    .left-aside {
+      width: 100%;
+      margin: auto;
+      padding: 10px;
+    }
+  }
+
+  main {
+    width: 100%;
+  }
+}

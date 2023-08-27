@@ -1,0 +1,31 @@
+#container {
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  display: flex;
+  .btn1 {
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px 0px 0px 5px;
+  }
+  .btn2 {
+    width: 100px;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+  }
+  .red-bg {
+    background-color: #860663;
+    color: white;
+    cursor: pointer;
+  }
+  div{
+    text-align: center;
+  }
+  
+}
+input{
+  margin-top: 10px !important;
+}
+label{
+  margin-right: 10px;
+}

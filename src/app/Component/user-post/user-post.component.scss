@@ -1,0 +1,128 @@
+section {
+  margin-top: 10px;
+  height: 87vh;
+  // border-left: 3px solid gray;
+  // border-right: 3px solid gray;
+  overflow-y: scroll;
+}
+section::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  img {
+    height: 35vh;
+    width: 80%;
+    padding: 10px;
+  }
+  .post-img:hover {
+    transform: scale(1.1);
+    cursor: pointer !important;
+  }
+  .price-section div {
+    display: flex;
+    justify-content: space-between;
+    button {
+      margin-left: 20px;
+      outline: none;
+      border: none;
+      background-color: #009587;
+      color: white;
+      cursor: pointer !important;
+    }
+  }
+  .pg-info div {
+    margin: 10px;
+  }
+  .price-section {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+      rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 10px;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+.pg-details {
+  display: flex;
+  justify-content: space-around;
+}
+p {
+  margin: 8px;
+  // font-size: 10px;
+}
+h3{
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+@media only screen and (max-width: 840px) {
+  .pg-details {
+    display: block;
+  }
+  .btn {
+    display: flex !important;
+    justify-content: flex-end !important;
+    justify-items: flex-end;
+  }
+
+  .card {
+    img {
+      width: 95%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .btn {
+    display: flex !important;
+    justify-content: space-between !important;
+    justify-items: center;
+  }
+  .card {
+    img {
+      width: 95%;
+      height: 25vh;
+    }
+  }
+  .like-comment-icon {
+    width: 99% !important;
+  }
+}
+
+.like-comment-icon {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.like-comment-icon img {
+  height: 40px;
+  width: 40px;
+}
+
+.social-icon {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    height: 35px;
+    width: 35px;
+    margin: 20px;
+    
+  }
+  img:hover {
+    transform: scale(1.5);
+  }
+}
+#share:hover {
+  transform: scale(1.5);
+  cursor: pointer !important;
+}
+button:hover{
+  transform: scale(1.1);
+}

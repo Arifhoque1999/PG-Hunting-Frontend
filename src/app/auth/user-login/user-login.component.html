@@ -1,0 +1,24 @@
+<form [formGroup]="logInForm" (ngSubmit)="onLogIn()">
+  <div class="form-box">
+    <div>
+      <label for=""> User Name</label>
+      <input
+        pInputText
+        type="text"
+        formControlName="userName"
+        placeholder="User Name"
+        id="userName"
+      />
+    </div>
+    <div>
+      <label for="">PassWord</label>
+      <p-password
+        placeholder="Password"
+        formControlName="password"
+        [toggleMask]="true"
+        [style]="{ 'margin-right': '25px', 'margin-top': '10px' }"
+      ></p-password>
+    </div>
+    <button type="submit">LogIn</button>
+  </div>
+</form>

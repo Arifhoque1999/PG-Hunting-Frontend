@@ -1,0 +1,122 @@
+nav {
+  width: 100%;
+  border-bottom: 3px solid gainsboro;
+  // background-color:#009587 ;
+  display: flex;
+  justify-content: space-around;
+  .card {
+    background-color: #009587;
+  }
+  .nav-left {
+    width: 50%;
+    img{
+      height: 50px;
+    }
+  }
+  .nav-right {
+    width: 50%;
+  }
+  .user-icon {
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    border-radius: 50%;
+    img {
+      height: 40px;
+      width: 40px;
+      cursor: pointer !important;
+    }
+    p {
+      font-size: 7px;
+      margin: 0px;
+    }
+  }
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: serif;
+  margin: 0px;
+  padding-left: 10px;
+}
+a {
+  color: black;
+}
+.ber-icon {
+  display: none;
+  img{
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer !important;
+  }
+}
+@media only screen and (max-width: 842px) {
+  nav {
+    justify-content: space-between;
+  }
+  .user-icon {
+    display: none;
+  }
+  .nav-right {
+    display: none;
+  }
+
+  .ber-icon {
+    display: block;
+  }
+}
+//  mobile
+
+.mobile-container {
+  width: 99%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    // background-color: #009587;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    img {
+      height: 35px;
+      width: 35px;
+      cursor: pointer !important;
+    }
+    p {
+      margin: 0px;
+    }
+    button {
+      width: 40%;
+      cursor: pointer !important;
+    }
+  }
+}
+li {
+  list-style: none;
+  margin-left: -40px;
+  padding-left: 30px;
+  cursor: pointer !important;
+}
+li div {
+  padding: 10px;
+}
+h4 {
+  margin: 0px;
+}
+ul {
+  margin-top: 4px;
+  height: 30vh;
+}
+
+li:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  
+  color: white;
+  background-color: #009587;
+}

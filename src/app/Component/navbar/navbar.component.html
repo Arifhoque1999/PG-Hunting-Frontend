@@ -1,0 +1,85 @@
+<nav>
+  <div class="nav-left">
+    <img src="../../../assets/web-logo.png" alt="" routerLink="/">
+  </div>
+
+  <div class="nav-right">
+    <div class="card">
+      <p-tabMenu
+        [model]="items"
+        [activeItem]="activeItem"
+        (activeItemChange)="onActiveItemChange($event)"
+      >
+        <ng-template pTemplate="item" let-item>
+          <a
+            [routerLink]="['/' + item.label.toLowerCase().replace(' ', '-')]"
+            >{{ item.label }}</a
+          >
+        </ng-template>
+      </p-tabMenu>
+    </div>
+  </div>
+  <div class="user-icon">
+    <img
+      src="../../../assets/user-avatar.png"
+      alt="user-icon"
+      (click)="toggleLogoutButton()"
+    />
+    <p>Arif Hoque Sarkar</p>
+    <div>
+      <button *ngIf="showLogoutButton" (click)="userLogOut()">Logout</button>
+    </div>
+  </div>
+
+  <div class="ber-icon">
+    <img
+      src="../../../assets/hamburger.png"
+      alt=""
+      (click)="visibleSidebar1 = true"
+    />
+  </div>
+</nav>
+<p-sidebar
+  [(visible)]="visibleSidebar1"
+  position="left"
+  [style]="{ width: '80%', height: '29em' }"
+>
+  <nav>
+    <div class="mobile-container">
+      <div class="header">
+        <div>
+          <img src="../../../assets/user-avatar.png" alt="" />
+          <p>Arif Hoque Sarkar</p>
+        </div>
+        <img src="../../../assets/logout.png" alt="" (click)="userLogOut()" />
+      </div>
+      <div>
+        <ul>
+          <li>
+            <div routerLink="/home">
+              <h4>Home</h4>
+            </div>
+          </li>
+          <li>
+            <div routerLink="/v2">
+              <h4>Registration</h4>
+            </div>
+          </li>
+          <li>
+            <div routerLink="/v3">
+              <h4>Our Service</h4>
+            </div>
+          </li>
+          <li>
+            <div routerLink="/v4">
+              <h4>Book Flat</h4>
+            </div>
+          </li>
+          <li>
+            <div routerLink="/v1"><h4>Pg Post</h4></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</p-sidebar>

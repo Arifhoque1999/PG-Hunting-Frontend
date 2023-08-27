@@ -1,0 +1,47 @@
+.form-box {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: absolute;
+  width: 65vh;
+  top: 30%;
+  left: 30%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#userName {
+  margin-right: 35px;
+}
+
+#password {
+  margin-right: 20px;
+}
+input {
+  width: 34vh;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+button {
+  width: 30vh;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #009587;
+  border: none;
+  outline: none;
+  padding: 13px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer !important;
+}
+button:hover{
+  transform: scale(1.1);
+}
+label {
+  margin-right: 10px;
+}
+.form-box div {
+  text-align: center;
+}
+

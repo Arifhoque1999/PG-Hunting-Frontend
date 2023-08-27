@@ -1,0 +1,58 @@
+<section>
+  <div class="filter" (click)="toggleFedlter(false)">
+    <button>Fielter</button>
+  </div>
+  <form [formGroup]="userSearch" *ngIf="isShow==true" [class.formShow]="isShow">
+    <span class="p-input-icon-right">
+      <input
+        type="text"
+        pInputText
+        placeholder="Type Your Location"
+        id="inputSearch"
+        formControlName="location"
+      />
+      <i class="pi pi-search" (click)="userSearchOptin()"></i>
+    </span>
+
+    <div class="field col-12 md:col-4">
+      <label for="icon">Post Dtae</label>
+      <p-calendar formControlName="date" placeholder="Post Date"></p-calendar>
+    </div>
+
+    <div class="selectoption">
+      <div>
+        <p-checkbox
+          formControlName="typePg"
+          value="New York"
+          inputId="ny"
+        ></p-checkbox>
+        <label for=""> PG </label>
+      </div>
+      <div>
+        <p-checkbox
+          formControlName="typeRoom"
+          value="New York"
+          inputId="ny"
+        ></p-checkbox>
+        <label for=""> Room </label>
+      </div>
+
+      <div>
+        <p-checkbox
+          formControlName="typeFlat1"
+          value="New York"
+          inputId="ny"
+        ></p-checkbox>
+        <label for=""> Flat 1BHK </label>
+      </div>
+      <div>
+        <p-checkbox
+          formControlName="typeFlat2"
+          value="New York"
+          inputId="ny"
+        ></p-checkbox>
+        <label for=""> Flat 1BHK </label>
+      </div>
+    </div>
+  </form>
+</section>

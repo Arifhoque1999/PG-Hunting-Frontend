@@ -1,0 +1,124 @@
+<app-navbar></app-navbar>
+<section>
+  <form [formGroup]="createPostForm">
+    <div class="form-box">
+      <div>
+        <label for="postImg" class="postImg">
+          <p>Upload Image</p>
+
+          <img
+            src="../../../assets/cloud-computing.png"
+            alt="Upload-icon"
+            id="uploadIcon"
+          />
+        </label>
+        <input
+          type="file"
+          name="postImg"
+          id="postImg"
+          style="display: none"
+          accept="image/*"
+          (change)="onFileSelected($event)"
+        />
+      </div>
+
+      <div>
+        <label for="title"> Post Title</label>
+        <textarea
+          rows="5"
+          cols="25"
+          pInputTextarea
+          formControlName="postTitle"
+        ></textarea>
+      </div>
+
+      <div>
+        <label class="roomOption" for="roomType">Room Type</label>
+        <p-dropdown
+          inputId="state"
+          [options]="states"
+          placeholder="Select"
+          optionLabel="name"
+          class="roomType"
+          formControlName="roomType"
+          [style]="{ width: '210px' }"
+        ></p-dropdown>
+      </div>
+      <div>
+        <label class="roomprice" for="title"> Room Rent</label>
+        <input
+          type="text"
+          pInputText
+          placeholder="Room Price"
+          formControlName="roomPrice"
+        />
+      </div>
+
+      <div class="option">
+        <div>
+          <label for="">Wifi </label>
+          <p-checkbox
+            [binary]="true"
+            inputId="binary"
+            formControlName="wifi"
+          ></p-checkbox>
+        </div>
+
+        <div>
+          <label for="">Food </label>
+          <p-checkbox
+            [binary]="true"
+            inputId="binary"
+            formControlName="food"
+          ></p-checkbox>
+        </div>
+
+        <div>
+          <label for="">Share</label>
+          <p-checkbox
+            [binary]="true"
+            inputId="binary"
+            formControlName="roomShare"
+          ></p-checkbox>
+        </div>
+      </div>
+      <div>
+        <label class="state" for="title">State</label>
+        <input
+          type="text"
+          formControlName="states"
+          pInputText
+          placeholder="Enter Your States"
+        />
+      </div>
+      <div>
+        <label class="area" for="title">Area Location</label>
+        <input
+          type="text"
+          pInputText
+          placeholder="Enter Your Area Location"
+          formControlName="localArea"
+        />
+      </div>
+
+      <div>
+        <label for="title">Pin Code</label>
+        <input
+          type="text"
+          pInputText
+          placeholder="Enter Your PinCode"
+          formControlName="pinCode"
+        />
+      </div>
+
+      <div>
+        <button (click)="createPost()">Post</button>
+      </div>
+    </div>
+  </form>
+  <div>
+    <div id="post-img" *ngIf="selectedFile">
+      <img [src]="selectedFileUrl" alt="Uploaded Image" id="profile-img" />
+    </div>
+  </div>
+</section>

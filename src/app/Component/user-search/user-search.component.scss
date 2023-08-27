@@ -1,0 +1,31 @@
+div {
+  margin: 10px;
+}
+#inputSearch {
+  width: 100%;
+}
+.filter {
+  display: none;
+}
+@media only screen and (max-width: 840px) {
+  .selectoption {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .selectoption {
+    display: block;
+  }
+  .filter {
+    display: flex;
+    justify-content: end;
+  }
+  .formShow{
+    display: none;
+  }
+  .formShow {
+    display: block;
+  }
+}

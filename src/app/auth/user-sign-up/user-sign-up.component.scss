@@ -1,0 +1,51 @@
+.form-box {
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.name {
+  margin-right: -13px;
+}
+#userName {
+  margin-right: 20px;
+}
+.email {
+  margin-right: -14px;
+}
+#phoneNumber {
+  margin-right: 50px;
+}
+
+#password {
+  margin-right: 11px;
+}
+input {
+  width: 34vh;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+button {
+  width: 200px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #009587;
+  border: none;
+  outline: none;
+  padding: 13px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer !important;
+}
+button:hover {
+  transform: scale(1.1);
+}
+label {
+  margin-right: 10px;
+}

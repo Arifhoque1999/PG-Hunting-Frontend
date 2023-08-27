@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<p>our-service works!</p>
+
+<div id="container">
+  <div [class.red-bg]="isRed" (click)="toggleColor(true)" class="btn1">
+    Admin
+  </div>
+  <div [class.red-bg]="!isRed" (click)="toggleColor(false)" class="btn2">
+    Employee
+  </div>
+</div>
+<div *ngIf="isRed == true">
+  <div>
+    <label for="">name</label>
+    <input pInputText type="text" placeholder="Your Name" />
+  </div>
+  <div>
+    <input pButton type="button" value="Submit" />
+  </div>
+</div>
+
+<div *ngIf="isRed == false">
+  <div>
+    <label for="">name</label>
+    <input pInputText type="text" placeholder="Your Name" />
+  </div>
+  <div>
+    <label for="">Email</label>
+    <input pInputText type="email" placeholder="Your Email" />
+  </div>
+  <div>
+    <input pButton type="button" value="Submit" />
+  </div>
+</div>

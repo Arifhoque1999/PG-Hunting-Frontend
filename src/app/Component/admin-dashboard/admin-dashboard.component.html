@@ -1,0 +1,35 @@
+<h1>Product List</h1>
+<div>
+  <input type="text" [(ngModel)]="searchText" (ngModelChange)="filterData()" placeholder="Search...">
+</div>
+<p-table [value]="showData" styleClass="p-datatable-striped">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Stock</th>
+      <th>Image</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-data>
+    <tr>
+      <td>{{ data.id }}</td>
+      <td>{{ data.title }}</td>
+      <td>{{ data.price }}</td>
+      <td>{{ data.description }}</td>
+      <td>{{ data.stock }}</td>
+      <td><img [src]='data.thumbnail' alt="" [style]="{'width':'15vh'}"></td>
+    </tr>
+  </ng-template>
+</p-table>
+
+
+<p-paginator
+  [rows]="rows"
+  [pageLinkSize]="5"
+  [totalRecords]="products?.length"
+  (onPageChange)="paginator($event)"
+  [templateLeft]
+></p-paginator>
